@@ -1,7 +1,7 @@
 #ifndef ICECREAMFACTORYINTERFACE_H
 #define ICECREAMFACTORYINTERFACE_H
 #include "IceCreamInterface.h"
-// ±ùä¿ÁÜ¹¤³§½Ó¿Ú
+// å†°æ·‡æ·‹å·¥å‚æ¥å£
 class IceCreamFactoryInterface
 {
 public:

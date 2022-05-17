@@ -39,6 +39,6 @@ private:
     IceCreamFactoryInterface *m_pVanillaIceCreamFactory;
 };
 
-// ³õÊ¼»¯¾²Ì¬±äÁ¿
+// åˆå§‹åŒ–é™æ€å˜é‡
 EagerSingletonFactoryFacade EagerSingletonFactoryFacade::m_oInstance;
 #endif // EAGERSINGLETONFACTORYFACADE_H

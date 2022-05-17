@@ -1,7 +1,7 @@
 #ifndef IceCreamInterface_H
 #define IceCreamInterface_H
 
-// ±ùä¿ÁÜ½Ó¿Ú
+// å†°æ·‡æ·‹æ¥å£
 class IceCreamInterface
 {
 public:

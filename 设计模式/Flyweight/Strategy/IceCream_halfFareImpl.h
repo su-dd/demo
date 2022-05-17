@@ -8,7 +8,7 @@ class IceCream_halfFareImpl : public SaleStrategyInterface
 public:
     virtual void promotion() override
     {
-        qDebug() << QStringLiteral("±ùä¿ÁÜ°ë¼Û£¡");
+        qDebug() << QStringLiteral("å†°æ·‡æ·‹åŠä»·ï¼");
     }
 };
 #endif // ICECREAM_HALFFAREIMPL_H

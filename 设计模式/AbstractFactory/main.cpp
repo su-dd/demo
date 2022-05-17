@@ -6,8 +6,6 @@ int main(int argc, char *argv[])
 {
     FactoryProducer oProducer;
 
-
-
     IceCreamInterface* pIceCream = nullptr;
     ChipsInterface* pChips = nullptr;
 

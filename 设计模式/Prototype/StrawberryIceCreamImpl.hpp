@@ -5,13 +5,13 @@
 #include <QString>
 #include "IceCreamInterface.h"
 
-// ²İİ®±ùä¿ÁÜ
+// è‰è“å†°æ·‡æ·‹
 class StrawberryIceCreamImpl : public IceCreamInterface
 {
 public:
     virtual void taste() override
     {
-        qDebug() << QStringLiteral("²İİ®±ùä¿ÁÜµÄÎ¶µÀ£¡");
+        qDebug() << QStringLiteral("è‰è“å†°æ·‡æ·‹çš„å‘³é“ï¼");
     }
 
     IceCreamInterface *clone()

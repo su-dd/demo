@@ -8,7 +8,7 @@ class Chips_freeImpl : public SaleStrategyInterface
 public:
     virtual void promotion() override
     {
-        qDebug() << QStringLiteral("ÊíÌõÃâ·Ñ£¡");
+        qDebug() << QStringLiteral("è–¯æ¡å…è´¹ï¼");
     }
 };
 #endif // CHIPS_FREEIMPL_H

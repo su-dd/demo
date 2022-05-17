@@ -10,7 +10,7 @@ class LittleChipsImpl : public ChipsInterface
 public:
     virtual void size()
     {
-        qDebug() << QStringLiteral("这个小份的薯条！");
+        qDebug() << QStringLiteral("杩欎釜灏忎唤鐨勮柉鏉★紒");
     }
 };
 

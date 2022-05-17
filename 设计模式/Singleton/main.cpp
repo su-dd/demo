@@ -7,9 +7,9 @@
 int main(int argc, char *argv[])
 {
 #ifdef LazySingleton
-    // ÀÁººµ¥Àý1
+    // æ‡’æ±‰å•ä¾‹1
     IceCreamFactoryFacadeInterface *pFactoryFacade = LazySingletonFactoryFacade::getInstance_1();
-    // ÀÁººµ¥Àý2
+    // æ‡’æ±‰å•ä¾‹2
 //    IceCreamFactoryFacadeInterface *pFactoryFacade = LazySingletonFactoryFacade::getInstance_2();
 
     IceCreamInterface* pStrawberryIceCream = pFactoryFacade->createStrawberryIceCream();

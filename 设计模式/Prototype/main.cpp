@@ -4,13 +4,13 @@
 
 int main(int argc, char *argv[])
 {
-    // Âò¸ö²ÝÝ®Î¶µÄ±ùä¿ÁÜ
+    // ä¹°ä¸ªè‰èŽ“å‘³çš„å†°æ·‡æ·‹
     IceCreamInterface *pIceCreamPrototype1 = new StrawberryIceCreamImpl();
-    // Âò¸öÏã²ÝÎ¶µÄ±ùä¿ÁÜ
+    // ä¹°ä¸ªé¦™è‰å‘³çš„å†°æ·‡æ·‹
     IceCreamInterface *pIceCreamPrototype2 = new VanillaIceCreamImpl();
 
 
-    // ¿ËÂ¡
+    // å…‹éš†
     IceCreamInterface *pClone = pIceCreamPrototype1->clone();
     pClone->taste();
     delete pClone;

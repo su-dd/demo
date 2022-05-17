@@ -32,7 +32,7 @@ public:
         }
     }
 
-    // ¶ÔÓÚµ¥Ïß³Ì
+    // å¯¹äºå•çº¿ç¨‹
     static IceCreamFactoryFacadeInterface *getInstance_1()
     {
         if (nullptr == m_pInstance)
@@ -42,7 +42,7 @@ public:
         return m_pInstance;
     }
 
-    // ¶ÔÓÚ¶àÏß³Ì
+    // å¯¹äºå¤šçº¿ç¨‹
     static IceCreamFactoryFacadeInterface *getInstance_2()
     {
         QMutexLocker oLocker(&s_oMutex);
@@ -53,7 +53,7 @@ public:
         return m_pInstance;
     }
 
-    // ¶ÔÓÚ¶àÏß³Ì - Ë«ÖØÅĞ¿Õ
+    // å¯¹äºå¤šçº¿ç¨‹ - åŒé‡åˆ¤ç©º
     static IceCreamFactoryFacadeInterface *getInstance_3()
     {
         if (nullptr == m_pInstance)
@@ -82,7 +82,7 @@ private:
     IceCreamFactoryInterface *m_pVanillaIceCreamFactory;
 };
 
-// ³õÊ¼»¯¾²Ì¬±äÁ¿
+// åˆå§‹åŒ–é™æ€å˜é‡
 IceCreamFactoryFacadeInterface * LazySingletonFactoryFacade::m_pInstance = nullptr;
 QMutex LazySingletonFactoryFacade::s_oMutex(QMutex::Recursive);
 #endif // LAZYSINGLETONFACTORYFACADE_H

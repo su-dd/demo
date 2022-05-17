@@ -27,18 +27,18 @@ INCLUDEPATH += \
 SOURCES += main.cpp
 
 HEADERS += \
-# ±ùä¿ÁÜ
+# å†°æ·‡æ·‹
     IceCream/IceCreamInterface.h \
     IceCream/StrawberryIceCreamImpl.hpp \
     IceCream/VanillaIceCreamImpl.hpp \
-# ±ùä¿ÁÜ¹¤³§
+# å†°æ·‡æ·‹å·¥å‚
     Factory/IceCreamFactoryInterface.h \
     Factory/StrawberryIceCreamFactory.hpp \
     Factory/VanillaIceCreamFactory.hpp \
-# Íâ¹Û
+# å¤–è§‚
     Facade/IceCreamFactoryFacadeInterface.h \
     Facade/IceCreamFactoryFacade.hpp \
-# ÀÁººµ¥Àı
+# æ‡’æ±‰å•ä¾‹
     Singleton/EagerSingletonFactoryFacade.hpp \
     Singleton/LazySingletonFactoryFacade.hpp
 
