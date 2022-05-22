@@ -4,6 +4,6 @@ import com.demo05.case1.pojo.User;
 
 import javax.xml.bind.ValidationException;
 
-public interface RegistrationService {
+public interface UserService {
     public User register(String name, String phone, String address) throws ValidationException;
 }

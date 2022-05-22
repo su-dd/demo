@@ -1,4 +1,4 @@
-package com.demo20.case1.dp;
+package com.demo20.case1.pojo;
 
 import lombok.Data;
 

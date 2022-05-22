@@ -3,7 +3,7 @@ package com.demo05.case1.service.impl;
 import com.demo05.case1.pojo.SalesRep;
 import com.demo05.case1.pojo.User;
 import com.demo05.case1.repository.SalesRepRepo;
-import com.demo05.case1.service.RegistrationService;
+import com.demo05.case1.service.UserService;
 import com.demo05.case1.repository.UserRepo;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import javax.xml.bind.ValidationException;
 import java.util.Arrays;
 
 @Service
-public class RegistrationServiceImpl implements RegistrationService {
+public class UserServiceImpl implements UserService {
     private UserRepo userRepo;
     private SalesRepRepo salesRepRepo;
 

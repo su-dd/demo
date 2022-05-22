@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>20Demo</artifactId>
-    <name>DDD基础概念</name>
-    <description>实体、值对象、领域服务、应用服务概念的介绍</description>
+    <artifactId>30Demo</artifactId>
+    <name>基于Cola的DDD初步实践</name>
+    <description>讲述DDD是初步实践中，遇到的问题，和问题的解决。</description>
     <packaging>jar</packaging>
     <dependencies>
         <!-- Spring boot components-->

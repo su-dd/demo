@@ -7,16 +7,13 @@ import com.demo05.case2.pojo.SalesRep;
 import com.demo05.case2.pojo.User;
 import com.demo05.case2.repository.SalesRepRepo;
 import com.demo05.case2.repository.UserRepo;
-import com.demo05.case2.service.RegistrationService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.demo05.case2.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.xml.bind.ValidationException;
-import java.util.Arrays;
 
 @Service
-public class RegistrationServiceImpl implements RegistrationService {
+public class UserServiceImpl implements UserService {
 
     @Resource
     private UserRepo userRepo;

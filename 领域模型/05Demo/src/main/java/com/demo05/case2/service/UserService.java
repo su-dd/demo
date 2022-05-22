@@ -5,8 +5,6 @@ import com.demo05.case2.dp.Name;
 import com.demo05.case2.dp.PhoneNum;
 import com.demo05.case2.pojo.User;
 
-import javax.xml.bind.ValidationException;
-
-public interface RegistrationService {
+public interface UserService {
     public User register(Name name, PhoneNum phone, Address address);
 }

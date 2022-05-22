@@ -1,19 +1,31 @@
-package com.demo20.case1.dp;
+package com.demo20.case2.vo;
+
+import lombok.Data;
 
 import javax.xml.bind.ValidationException;
 import java.util.Arrays;
 
-public class PhoneNum {
+@Data
+public class PhoneNumber {
     private final String phone;
 
-    public PhoneNum(String phone) throws ValidationException {
+    // 区号
+    private final String areaCode;
+
+    // 运行商
+    private final String OperatorCode;
+
+    public PhoneNumber(String phone) throws ValidationException {
         if (phone == null || !isValidPhoneNumber(phone)) {
             throw new ValidationException("phone");
         }
         this.phone = phone;
+        this.areaCode = this.findAreaCode(phone);
+        this.OperatorCode = "电信";
     }
 
-    public String findAreaCode() {
+    // 获得区号
+    public String findAreaCode(String phone) {
         for (int i = 0; i < phone.length(); i++) {
             String prefix = phone.substring(0, i);
             if (isAreaCode(prefix)) {
@@ -22,6 +34,11 @@ public class PhoneNum {
         }
         return null;
     }
+
+    public String getOperatorCode() {
+        return this.OperatorCode;
+    }
+
     //判断该区号是否存在
     private boolean isAreaCode(String prefix) {
         String[] areas = new String[]{"0571", "021"};

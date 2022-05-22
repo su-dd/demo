@@ -4,7 +4,7 @@ import com.demo05.case2.dp.Address;
 import com.demo05.case2.dp.Name;
 import com.demo05.case2.dp.PhoneNum;
 import com.demo05.case2.pojo.User;
-import com.demo05.case2.service.RegistrationService;
+import com.demo05.case2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +18,11 @@ import javax.xml.bind.ValidationException;
 @RequestMapping(value = "/case2")
 public class RegistrationController {
     @Autowired
-    RegistrationService registrationService;
+    UserService userService;
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
     public User register(@RequestParam String name, @RequestParam String phone, @RequestParam String address) throws ValidationException {
-        return registrationService.register(new Name(name), new PhoneNum(phone), new Address(address));
+        return userService.register(new Name(name), new PhoneNum(phone), new Address(address));
     }
 }
