@@ -1,9 +1,9 @@
-package com.demo20.case2.controller;
+package com.demo30.case1.controller;
 
-import com.demo20.case2.entity.User;
-import com.demo20.case2.vo.Name;
-import com.demo20.case2.vo.PhoneNumber;
-import com.demo20.case2.service.UserService;
+import com.demo30.case1.entity.User;
+import com.demo30.case1.vo.Name;
+import com.demo30.case1.vo.PhoneNumber;
+import com.demo30.case1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.xml.bind.ValidationException;
 
 @Controller
-@RequestMapping(value = "/case2")
+@RequestMapping(value = "/case1")
 public class UserController {
     @Autowired
     UserService userService;

@@ -1,7 +1,8 @@
-package com.demo20.case2.repository.impl.builder;
+package com.demo30.case1.repository.impl.builder;
 
-import com.demo20.case2.entity.User;
-import com.demo20.case2.repository.impl.dateobject.UserDO;
+
+import com.demo30.case1.entity.User;
+import com.demo30.case1.repository.impl.dateobject.UserDO;
 
 public class UserBuilder {
     public static UserDO toDO(User user) {

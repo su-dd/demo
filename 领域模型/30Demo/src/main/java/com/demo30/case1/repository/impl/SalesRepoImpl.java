@@ -1,11 +1,12 @@
-package com.demo20.case2.repository.impl;
+package com.demo30.case1.repository.impl;
 
-import com.demo20.case2.entity.Sales;
-import com.demo20.case2.repository.SalesRepo;
-import com.demo20.case2.repository.impl.builder.SalesBuilder;
-import com.demo20.case2.repository.impl.dateobject.SalesDO;
-import com.demo20.case2.repository.impl.mapper.SalesMapper;
-import com.demo20.case2.vo.PhoneNumber;
+
+import com.demo30.case1.entity.Sales;
+import com.demo30.case1.repository.SalesRepo;
+import com.demo30.case1.repository.impl.builder.SalesBuilder;
+import com.demo30.case1.repository.impl.dateobject.SalesDO;
+import com.demo30.case1.repository.impl.mapper.SalesMapper;
+import com.demo30.case1.vo.PhoneNumber;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
