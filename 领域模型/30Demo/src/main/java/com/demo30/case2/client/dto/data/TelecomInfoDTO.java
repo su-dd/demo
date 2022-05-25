@@ -1,4 +1,4 @@
-package com.demo30.case1.dto;
+package com.demo30.case2.client.dto.data;
 
 import lombok.Data;
 

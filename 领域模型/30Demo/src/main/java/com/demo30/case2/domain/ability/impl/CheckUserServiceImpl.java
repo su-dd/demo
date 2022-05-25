@@ -1,18 +1,18 @@
-package com.demo30.case1.service.impl;
+package com.demo30.case2.domain.ability.impl;
 
 
-import com.demo30.case1.entity.Reward;
-import com.demo30.case1.entity.User;
-import com.demo30.case1.repository.RewardRepo;
-import com.demo30.case1.service.CheckUserService;
-import com.demo30.case1.service.RiskControlService;
+import com.demo30.case2.domain.ability.CheckUserService;
+import com.demo30.case2.domain.ability.RiskControlService;
+import com.demo30.case2.domain.gateway.RewardGateWay;
+import com.demo30.case2.domain.model.entities.Reward;
+import com.demo30.case2.domain.model.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CheckUserServiceImpl implements CheckUserService {
     @Autowired
-    private RewardRepo rewardRepo;
+    private RewardGateWay rewardRepo;
     @Autowired
     private RiskControlService riskControlService;
 
