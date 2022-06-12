@@ -38,7 +38,6 @@ public class UserServiceImpl implements UserService {
         }
         //找到区号负责人（SalesRep）
         SalesRep rep = salesRepRepo.findRep(areaCode);
-
         // 最后创建用户，落盘，然后返回
         User user = new User();
         user.name = name;
@@ -47,7 +46,6 @@ public class UserServiceImpl implements UserService {
         if (null != rep) {
             user.repId = rep.id;
         }
-
         return userRepo.save(user);
     }
 

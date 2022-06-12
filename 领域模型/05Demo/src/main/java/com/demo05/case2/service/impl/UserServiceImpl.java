@@ -14,7 +14,6 @@ import javax.annotation.Resource;
 
 @Service
 public class UserServiceImpl implements UserService {
-
     @Resource
     private UserRepo userRepo;
     @Resource
@@ -22,7 +21,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User register(Name name, PhoneNum phone, Address address) {
-
         //找到区号负责人（SalesRep）
         SalesRep rep = salesRepRepo.findRep(phone.findAreaCode());
 

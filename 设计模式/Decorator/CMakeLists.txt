@@ -3,13 +3,16 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+project(Decorator LANGUAGES CXX)
+
 # 将源代码添加到此项目的可执行文件。
-add_executable (Decorator
- "main.cpp"
- "IceCreamInterface.h"
- "StrawberryIceCreamImpl.h"
- "IceCreamDecorator.h"
- "NutIceCreamDecorator.h"
- )
+add_executable (
+    Decorator
+    "main.cpp"
+    "IceCreamInterface.h"
+    "StrawberryIceCreamImpl.h"
+    "IceCreamDecorator.h"
+    "NutIceCreamDecorator.h"
+    )
 
 # TODO: 如有需要，请添加测试并安装目标。

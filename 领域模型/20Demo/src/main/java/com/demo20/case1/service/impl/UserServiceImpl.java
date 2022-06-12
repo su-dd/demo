@@ -39,20 +39,16 @@ public class UserServiceImpl implements UserService {
         if (!name.getName().equals(telecomInfoDTO.getName())) {
             throw new ValidationException("phone : " + phone.getPhone());
         }
-
         //计算用户标签
         String label = getLabel(telecomInfoDTO);
         //计算销售ID
         String salesId = getSalesId(phone);
-
-        //构造User对象和Reward对象
+        //返回身份证
         String idCard = telecomInfoDTO.getIdCard();
-
         // 用户
         UserDO userDO = new UserDO(idCard, name.getName(), phone.getPhone(), label, salesId);
         // 对应新客奖励
         RewardDO rewardDO = new RewardDO(idCard,label);
-
         // 检查风控（查看库存等）
         if(!riskControlService.check(idCard, label)) {
             userDO.setNew(true);
@@ -61,7 +57,6 @@ public class UserServiceImpl implements UserService {
             userDO.setNew(false);
             rewardDO.setAvailable(true) ;
         }
-
         //存储信息
         rewardMapper.insert(rewardDO) ;
         return userMapper.insert(userDO);

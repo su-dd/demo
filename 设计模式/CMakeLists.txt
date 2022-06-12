@@ -3,30 +3,29 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("DesignPattern")
+project ("设计模式")
 
-# 包含子项目。
 
 # 简单工厂
-add_subdirectory("SimpleFactory")
+# add_subdirectory("SimpleFactory")
 
 # 工厂
-add_subdirectory("FactoryMethod")
+# add_subdirectory("FactoryMethod")
 
 # 抽象工厂
-add_subdirectory("AbstractFactory")
+# add_subdirectory("AbstractFactory")
 
 # 单例
-add_subdirectory("Singleton")
+# add_subdirectory("Singleton")
 
 # 模板方法
-add_subdirectory("Template")
+# add_subdirectory("Template")
 
 #享元模式
-add_subdirectory("Flyweight")
+# add_subdirectory("Flyweight")
 
 # 原型模式
-add_subdirectory("Prototype")
+# add_subdirectory("Prototype")
 
 # 策略模式
 add_subdirectory ("Strategy")

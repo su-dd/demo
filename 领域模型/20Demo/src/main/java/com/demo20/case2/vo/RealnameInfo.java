@@ -22,7 +22,6 @@ public class RealnameInfo {
         if (!name.getName().equals(telecomInfoDTO.getName())) {
             throw new ValidationException("phone : " + phoneNumber.getPhone());
         }
-
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.idCard = telecomInfoDTO.getIdCard();

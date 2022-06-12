@@ -2,15 +2,14 @@
 #define LITTLECHIPSIMPL_H
 
 #include "ChipsInterface.h"
-#include "qdebug.h"
-#include <QString>
+#include <iostream>
 
 class LittleChipsImpl : public ChipsInterface
 {
 public:
     virtual void size()
     {
-        qDebug() << QStringLiteral("这个小份的薯条！");
+        std::cout << "这个小份的薯条！";
     }
 };
 

@@ -1,5 +1,3 @@
-#include <QCoreApplication>
-
 #include "IceCreamInterface.h"
 #include "IceCreamFactoryFacade.hpp"
 

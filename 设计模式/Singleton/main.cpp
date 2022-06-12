@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include "LazySingletonFactoryFacade.hpp"
 #include "EagerSingletonFactoryFacade.hpp"
 

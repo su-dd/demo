@@ -2,15 +2,14 @@
 #define BIGCHIPSIMPL_H
 
 #include "ChipsInterface.h"
-#include "qdebug.h"
-#include <QString>
+#include <iostream>
 
 class BigChipsImpl : public ChipsInterface
 {
 public:
     virtual void size()
     {
-        qDebug() << QStringLiteral("这个大份的薯条！");
+        std::cout << "这个大份的薯条！";
     }
 };
 

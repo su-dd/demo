@@ -1,15 +1,15 @@
 #ifndef ICECREAM_H
 #define ICECREAM_H
 
-#include <QDebug>
-#include <QString>
+#include <iostream>
+#include <string>
 
 class IceCream
 {
 public:
     void taste()
     {
-        qDebug() << QStringLiteral("%1IceCream").arg(m_sflavour);
+        std::cout << QStringLiteral("%1IceCream").arg(m_sflavour);
     }
 
 protected:

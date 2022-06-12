@@ -35,3 +35,7 @@
 .idea/
 target/
 *.iml
+
+# vs
+.vs/
+out/

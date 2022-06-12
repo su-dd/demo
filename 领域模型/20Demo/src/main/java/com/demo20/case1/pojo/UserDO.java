@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class UserDO {
+    private String userId;
     private String idCard;
     private String name;
     private String phone;

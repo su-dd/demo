@@ -1,9 +1,8 @@
 #ifndef STRAWBERRYICECREAMIMPL_HPP
 #define STRAWBERRYICECREAMIMPL_HPP
 
-#include <QDebug>
-#include <QString>
 #include "IceCreamInterface.h"
+#include <iostream>
 
 // 草莓冰淇淋
 class StrawberryIceCreamImpl : public IceCreamInterface
@@ -11,7 +10,7 @@ class StrawberryIceCreamImpl : public IceCreamInterface
 public:
     virtual void taste() override
     {
-        qDebug() << QStringLiteral("草莓冰淇淋的味道！");
+        //std::cout << "草莓冰淇淋的味道！" << std::endl;
     }
 };
 

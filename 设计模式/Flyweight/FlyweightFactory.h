@@ -2,7 +2,7 @@
 #define FLYWEIGHTFACTORY_H
 #include "IceCream_halfFareImpl.h"
 #include "Chips_freeImpl.h"
-#include <QMap>
+#include ""
 class FlyweightFactory
 {
 public:
