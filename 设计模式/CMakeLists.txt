@@ -7,13 +7,13 @@ project ("设计模式")
 
 
 # 简单工厂
-# add_subdirectory("SimpleFactory")
+add_subdirectory("SimpleFactory")
 
 # 工厂
-# add_subdirectory("FactoryMethod")
+add_subdirectory("FactoryMethod")
 
 # 抽象工厂
-# add_subdirectory("AbstractFactory")
+add_subdirectory("AbstractFactory")
 
 # 单例
 # add_subdirectory("Singleton")
@@ -22,10 +22,10 @@ project ("设计模式")
 # add_subdirectory("Template")
 
 #享元模式
-# add_subdirectory("Flyweight")
+add_subdirectory("Flyweight")
 
 # 原型模式
-# add_subdirectory("Prototype")
+add_subdirectory("Prototype")
 
 # 策略模式
 add_subdirectory ("Strategy")

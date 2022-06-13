@@ -3,15 +3,25 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project(Factory LANGUAGES CXX)
+project(Facade LANGUAGES CXX)
+
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
 
 # 指定头文件的搜索路径
 include_directories(".")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (
-Factory
-"main.cpp"
+	Facade
+	"main.cpp"
+	"IceCreamFactoryFacade.hpp"
+	"Icecreamfactoryinterface.h"
+	"IceCreamInterface.h"
+	"StrawberryIceCreamFactory.hpp"
+	"StrawberryIceCreamImpl.hpp"
+	"VanillaIceCreamFactory.hpp"
+	"VanillaIceCreamImpl.hpp"
 )
 
 # TODO: 如有需要，请添加测试并安装目标。

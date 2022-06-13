@@ -1,16 +1,16 @@
-#ifndef STRAWBERRYICECREAMIMPL_HPP
+Ôªø#ifndef STRAWBERRYICECREAMIMPL_HPP
 #define STRAWBERRYICECREAMIMPL_HPP
 
 #include <iostream>
 #include "IceCreamInterface.h"
 
-// ≤››Æ±˘‰ø¡‹
+// ËçâËéìÂÜ∞Ê∑áÊ∑ã
 class StrawberryIceCreamImpl : public IceCreamInterface
 {
 public:
     virtual void taste() override
     {
-        std::cout << "≤››Æ±˘‰ø¡‹µƒŒ∂µ¿£°" << std::endl;
+        std::cout << "ËçâËéìÂÜ∞Ê∑áÊ∑ãÁöÑÂë≥ÈÅìÔºÅ" << std::endl;
     }
 };
 

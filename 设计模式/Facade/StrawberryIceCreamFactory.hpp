@@ -1,8 +1,8 @@
-#ifndef STRAWBERRYICECREAMFACTORY_H
+ï»¿#ifndef STRAWBERRYICECREAMFACTORY_H
 #define STRAWBERRYICECREAMFACTORY_H
 #include "IceCreamFactoryInterface.h"
 #include "StrawberryIceCreamImpl.hpp"
-// ²İİ®±ùä¿ÁÜ¹¤³§
+// è‰è“å†°æ·‡æ·‹å·¥å‚
 class StrawberryIceCreamFactory : public IceCreamFactoryInterface
 {
 public:

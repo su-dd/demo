@@ -1,8 +1,8 @@
-#ifndef FLYWEIGHTFACTORY_H
+﻿#ifndef FLYWEIGHTFACTORY_H
 #define FLYWEIGHTFACTORY_H
 #include "IceCream_halfFareImpl.h"
 #include "Chips_freeImpl.h"
-#include ""
+#include <map>
 class FlyweightFactory
 {
 public:
@@ -19,11 +19,13 @@ public:
 
     SaleStrategyInterface* getStrategy(StrategyType type)
     {
-        if (!m_oStrategyMap.contains(type))
+        m_oStrategyMap.
+        if (!m_oStrategyMap.find(type))
         {
             switch (type)
             {
             case IceCream_halfFare:
+                m_oStrategyMap.insert()
                 m_oStrategyMap.insert(type, new IceCream_halfFareImpl());
                 break;
             case Chips_free:
@@ -37,6 +39,6 @@ public:
     }
 
 private:
-    QMap<int, SaleStrategyInterface*> m_oStrategyMap;
+    std::map<int, SaleStrategyInterface*> m_oStrategyMap;
 };
 #endif // FLYWEIGHTFACTORY_H

@@ -3,7 +3,6 @@
 
 #include "BrandIntf.h"
 #include <iostream>
-#include <Windows.h>
 using namespace std;
 
 class ABrandImpl : public BrandIntf

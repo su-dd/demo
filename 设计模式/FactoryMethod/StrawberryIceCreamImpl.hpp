@@ -10,7 +10,7 @@ class StrawberryIceCreamImpl : public IceCreamInterface
 public:
     virtual void taste() override
     {
-        //std::cout << "草莓冰淇淋的味道！" << std::endl;
+        std::cout << "草莓冰淇淋的味道！" << std::endl;
     }
 };
 

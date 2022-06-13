@@ -1,4 +1,4 @@
-#ifndef IceCreamInterface_H
+﻿#ifndef IceCreamInterface_H
 #define IceCreamInterface_H
 
 // 冰淇淋接口

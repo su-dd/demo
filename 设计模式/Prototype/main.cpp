@@ -1,4 +1,4 @@
-#include "IceCreamInterface.h"
+﻿#include "IceCreamInterface.h"
 #include "StrawberryIceCreamImpl.hpp"
 #include "VanillaIceCreamImpl.hpp"
 

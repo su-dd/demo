@@ -3,6 +3,11 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+project(FactoryMethod LANGUAGES CXX)
+
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+
 # 指定头文件的搜索路径
 include_directories(".")
 

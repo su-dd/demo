@@ -1,4 +1,4 @@
-#ifndef IceCreamDecorator_h
+﻿#ifndef IceCreamDecorator_h
 #define IceCreamDecorator_h
 
 #include "IceCreamInterface.h"

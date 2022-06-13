@@ -1,4 +1,4 @@
-#ifndef ICECREAMFACTORYFACADE_H
+﻿#ifndef ICECREAMFACTORYFACADE_H
 #define ICECREAMFACTORYFACADE_H
 
 #include "IceCreamInterface.h"

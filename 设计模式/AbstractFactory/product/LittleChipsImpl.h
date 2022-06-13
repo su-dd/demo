@@ -9,7 +9,7 @@ class LittleChipsImpl : public ChipsInterface
 public:
     virtual void size()
     {
-        std::cout << "这个小份的薯条！";
+        std::cout << "这个小份的薯条！" << std::endl;
     }
 };
 

@@ -1,8 +1,8 @@
-#ifndef VANILLAICECREAMFACTORY_H
+ï»¿#ifndef VANILLAICECREAMFACTORY_H
 #define VANILLAICECREAMFACTORY_H
 #include "IceCreamFactoryInterface.h"
 #include "VanillaIceCreamImpl.hpp"
-// Ïã²İ±ùä¿ÁÜ¹¤³§
+// é¦™è‰å†°æ·‡æ·‹å·¥å‚
 class VanillaIceCreamFactory : public IceCreamFactoryInterface
 {
 public:

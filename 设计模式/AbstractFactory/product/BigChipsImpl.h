@@ -9,7 +9,7 @@ class BigChipsImpl : public ChipsInterface
 public:
     virtual void size()
     {
-        std::cout << "这个大份的薯条！";
+        std::cout << "这个大份的薯条！" << std::endl;
     }
 };
 

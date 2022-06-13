@@ -5,18 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 project(AbstractFactory LANGUAGES CXX)
 
-#set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-#set(CMAKE_AUTOUIC ON)
-#set(CMAKE_AUTOMOC ON)
-#set(CMAKE_AUTORCC ON)
-
-#set(CMAKE_CXX_STANDARD 11)
-#set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-#find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
-#find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
-
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
 
 # 指定头文件的搜索路径
 include_directories("factory")
@@ -38,7 +28,5 @@ AbstractFactory
 "product/StrawberryIceCreamImpl.hpp"
 "product/VanillaIceCreamImpl.hpp"
 )
-
-#target_link_libraries(AbstractFactory Qt${QT_VERSION_MAJOR}::Core)
 
 # TODO: 如有需要，请添加测试并安装目标。

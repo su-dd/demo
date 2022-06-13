@@ -18,7 +18,7 @@ protected:
         return;
     }
 
-    void setIceBall(const QString & str)
+    void setIceBall(const string & str)
     {
         m_sflavour = str;
     }
