@@ -2,7 +2,7 @@
 #define VANILLAFACTORY_H
 
 #include "factorytemplate.h"
-#include <QString>
+
 class VanillaFactory : public FactoryTemplate
 {
 public:
@@ -10,7 +10,7 @@ public:
 protected:
     virtual void createIceBall(IceCream &iceCream)
     {
-        iceCream.setIceBall(QStringLiteral("香草"));
+        iceCream.setIceBall("香草");
     }
 };
 

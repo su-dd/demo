@@ -14,28 +14,35 @@ public:
 public:
     ~FlyweightFactory()
     {
-        qDeleteAll(m_oStrategyMap.values());
+        for (auto item : m_oStrategyMap)
+        {            
+            delete item.second;
+            item.second = nullptr;
+        }
+        m_oStrategyMap.clear();
+
     }
 
     SaleStrategyInterface* getStrategy(StrategyType type)
     {
-        m_oStrategyMap.
-        if (!m_oStrategyMap.find(type))
+        auto item = m_oStrategyMap.find(type);
+        if (item == m_oStrategyMap.end())
         {
             switch (type)
             {
             case IceCream_halfFare:
-                m_oStrategyMap.insert()
-                m_oStrategyMap.insert(type, new IceCream_halfFareImpl());
+                m_oStrategyMap.insert(std::pair<int, SaleStrategyInterface*>(type, new IceCream_halfFareImpl()));
+                item = m_oStrategyMap.find(type);
                 break;
             case Chips_free:
-                m_oStrategyMap.insert(type, new Chips_freeImpl());
+                m_oStrategyMap.insert(std::pair<int, SaleStrategyInterface*>(type, new Chips_freeImpl()));
+                item = m_oStrategyMap.find(type);
                 break;
             default:
                 break;
             }
         }
-        return m_oStrategyMap[type];
+        return item->second;
     }
 
 private:

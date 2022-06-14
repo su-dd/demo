@@ -3,14 +3,13 @@
 #include "IceCreamFactoryFacadeInterface.h"
 #include "StrawberryIceCreamFactory.hpp"
 #include "VanillaIceCreamFactory.hpp"
-#include <QMutex>
-#include <QMutexLocker>
+#include <mutex>
 
 class LazySingletonFactoryFacade : public IceCreamFactoryFacadeInterface
 {
 private:
     static IceCreamFactoryFacadeInterface *m_pInstance;
-    static QMutex s_oMutex;
+    static std::mutex s_oMutex;
 
 private:
     LazySingletonFactoryFacade()
@@ -45,7 +44,7 @@ public:
     // 对于多线程
     static IceCreamFactoryFacadeInterface *getInstance_2()
     {
-        QMutexLocker oLocker(&s_oMutex);
+        std::lock_guard<std::mutex> oLock(s_oMutex);
         if (nullptr == m_pInstance)
         {
             m_pInstance = new LazySingletonFactoryFacade();
@@ -58,7 +57,7 @@ public:
     {
         if (nullptr == m_pInstance)
         {
-            QMutexLocker oLocker(&s_oMutex);
+            std::lock_guard<std::mutex> oLock(s_oMutex);
             if (nullptr == m_pInstance)
             {
                 m_pInstance = new LazySingletonFactoryFacade();
@@ -84,5 +83,5 @@ private:
 
 // 初始化静态变量
 IceCreamFactoryFacadeInterface * LazySingletonFactoryFacade::m_pInstance = nullptr;
-QMutex LazySingletonFactoryFacade::s_oMutex(QMutex::Recursive);
+std::mutex LazySingletonFactoryFacade::s_oMutex;
 #endif // LAZYSINGLETONFACTORYFACADE_H

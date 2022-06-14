@@ -2,14 +2,13 @@
 #define ICECREAM_H
 
 #include <iostream>
-#include <string>
 
 class IceCream
 {
 public:
     void taste()
     {
-        std::cout << QStringLiteral("%1IceCream").arg(m_sflavour);
+        std::cout << m_sflavour + "IceCream" << std::endl;
     }
 
 protected:
@@ -18,13 +17,13 @@ protected:
         return;
     }
 
-    void setIceBall(const string & str)
+    void setIceBall(const std::string & str)
     {
         m_sflavour = str;
     }
 
 private:
-    QString m_sflavour;
+    std::string m_sflavour;
 
     friend class FactoryTemplate;
     friend class StrawberryFactory;

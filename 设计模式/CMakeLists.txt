@@ -16,10 +16,10 @@ add_subdirectory("FactoryMethod")
 add_subdirectory("AbstractFactory")
 
 # 单例
-# add_subdirectory("Singleton")
+add_subdirectory("Singleton")
 
 # 模板方法
-# add_subdirectory("Template")
+add_subdirectory("Template")
 
 #享元模式
 add_subdirectory("Flyweight")
