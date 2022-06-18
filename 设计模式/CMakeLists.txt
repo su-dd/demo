@@ -41,3 +41,6 @@ add_subdirectory ("Bridge")
 
 # 面板模式
 add_subdirectory("Facade")
+
+# 适配器
+add_subdirectory("Adapter")

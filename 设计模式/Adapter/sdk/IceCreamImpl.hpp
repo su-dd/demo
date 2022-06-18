@@ -44,4 +44,14 @@ public:
     }
 };
 
+class VanillaIceCreamImpl : public IceCreamImpl
+{
+public:
+    virtual void taste() override
+    {
+        IceCreamImpl::taste();
+        cout << "香草冰淇淋！" << endl;
+    }
+};
+
 #endif
