@@ -1,4 +1,4 @@
-#ifndef IceCreamFacade_H
+﻿#ifndef IceCreamFacade_H
 #define IceCreamFacade_H
 
 #include "BrandImpl.hpp"

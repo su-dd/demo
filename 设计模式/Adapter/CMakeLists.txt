@@ -1,5 +1,5 @@
-# CMakeList.txt: test µÄ CMake ÏîÄ¿£¬ÔÚ´Ë´¦°üÀ¨Ô´´úÂë²¢¶¨Òå
-# ÏîÄ¿ÌØ¶¨µÄÂß¼­¡£
+ï»¿# CMakeList.txt: test çš„ CMake é¡¹ç›®ï¼Œåœ¨æ­¤å¤„åŒ…æ‹¬æºä»£ç å¹¶å®šä¹‰
+# é¡¹ç›®ç‰¹å®šçš„é€»è¾‘ã€‚
 #
 cmake_minimum_required (VERSION 3.8)
 

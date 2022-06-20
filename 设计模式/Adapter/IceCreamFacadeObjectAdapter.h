@@ -1,4 +1,4 @@
-#ifndef IceCreamFacadeObjectAdapter_H
+﻿#ifndef IceCreamFacadeObjectAdapter_H
 #define IceCreamFacadeObjectAdapter_H
 
 #include "sdk/IceCreamFacade.hpp"
