@@ -14,6 +14,7 @@ public:
 
     virtual void pushData(Item item) override;
     virtual Iterator<Item>* createIterator() override;
+    virtual Item& operator[](int index);
     virtual int getSize() override;
 private:
     std::vector<Item> data;
@@ -30,6 +31,12 @@ template <class Item>
 Iterator<Item>* ConcreteAggregate<Item>::createIterator()
 {
     return new ConcreteIterator<Item>(this);
+}
+
+template <class Item>
+Item& ConcreteAggregate<Item>::operator[](int index)
+{
+    return data.at(index);
 }
 
 template <class Item>

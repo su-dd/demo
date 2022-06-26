@@ -44,7 +44,7 @@ Item* ConcreteIterator<Item>::curItem()
     }
     else
     {
-        return NULL;
+        return nullptr;
     }
 }
 
