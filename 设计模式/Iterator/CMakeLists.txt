@@ -12,6 +12,7 @@ add_executable (
  "main.cpp"
  "Iterator.h"
  "ConcreteIterator.h"
+ "Aggregate.h"
  "ConcreteAggregate.h"
-
+ 
 )
