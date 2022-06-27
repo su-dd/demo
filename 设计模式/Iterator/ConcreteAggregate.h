@@ -14,7 +14,7 @@ public:
 
     virtual void pushData(Item item) override;
     virtual Iterator<Item>* createIterator() override;
-    virtual Item& operator[](int index);
+    virtual Item* operator[](int index);
     virtual int getSize() override;
 private:
     std::vector<Item> data;
@@ -34,9 +34,9 @@ Iterator<Item>* ConcreteAggregate<Item>::createIterator()
 }
 
 template <class Item>
-Item& ConcreteAggregate<Item>::operator[](int index)
+Item* ConcreteAggregate<Item>::operator[](int index)
 {
-    return data.at(index);
+    return &data.at(index);
 }
 
 template <class Item>

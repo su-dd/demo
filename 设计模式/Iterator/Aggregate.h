@@ -11,7 +11,7 @@ public:
 	virtual ~Aggregate() {}
 	virtual void pushData(Item item) {}
 	virtual Iterator<Item>* createIterator() { return nullptr; }
-	virtual Item& operator[](int index) { return Item(); }
+	virtual Item* operator[](int index) { return nullptr; }
 	virtual int getSize() { return 0; }
 };
 

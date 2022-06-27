@@ -15,6 +15,5 @@ int main(int argc, char* argv[])
     }
     delete it;
     delete aggr;
-
-	return 0;
+    return 0;
 }

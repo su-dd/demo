@@ -40,7 +40,7 @@ Item* ConcreteIterator<Item>::curItem()
 {
     if (cur < aggr->getSize())
     {
-        return &(*aggr)[cur];
+        return (*aggr)[cur];
     }
     else
     {
