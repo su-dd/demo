@@ -47,3 +47,6 @@ add_subdirectory("Adapter")
 
 # 迭代器
 add_subdirectory("Iterator")
+
+# 备忘录
+add_subdirectory(Memento)
