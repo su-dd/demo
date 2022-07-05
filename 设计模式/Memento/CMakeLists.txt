@@ -15,6 +15,10 @@ include_directories(".")
 add_executable (
 	Memento
 	"main.cpp"
- "Originator.h" "Memento.h" "CareTaker.h" "IceFactory.h")
+	"IceFactoryOriginator.h"
+	"Memento.h"
+	"CareTaker.h"
+	"IceCream.h"	
+)
 
 # TODO: 如有需要，请添加测试并安装目标。
