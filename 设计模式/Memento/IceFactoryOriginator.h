@@ -2,13 +2,23 @@
 #define Originator_H
 #include "IceCream.h"
 #include "Memento.h"
-using std;
+using namespace std;
 class IceFactoryOriginator
 {
 public:
 	IceFactoryOriginator()
 		: m_sflavour("")
 		, m_sDryFruit("") {}
+
+	void setFlavour(string flavour)
+	{
+		this->m_sflavour = flavour; 
+	}
+
+	void setDryFruit(string dryFruit) 
+	{
+		this->m_sDryFruit = dryFruit; 
+	}
 
 	IceCream* createCream()
 	{

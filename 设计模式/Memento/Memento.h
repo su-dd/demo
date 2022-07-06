@@ -1,5 +1,6 @@
 ﻿#ifndef Memento_H
 #define Memento_H
+using namespace std;
 class Memento
 {
 public:

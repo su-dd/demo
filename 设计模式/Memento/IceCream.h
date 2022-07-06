@@ -1,17 +1,20 @@
-#ifndef IceCream_H
-#define IceCreame_H
+ï»¿#ifndef IceCream_H
+#define IceCream_H
 #include <iostream>
-using std;
+using namespace std;
+
 class IceCream
 {
 public:
 	IceCream(string flavour, string dryFruit)
 		: m_sflavour(flavour)
-		, m_sDryFruit(dryFruit) {}
+		, m_sDryFruit(dryFruit)
+	{
+	}
 
 	void taste()
 	{
-		cout << m_sDryFruit + m_sflavour + "±ùä¿ÁÜ" << endl;
+		cout << "åŠ äº†" + m_sDryFruit + "çš„" + m_sflavour + "å†°æ·‡æ·‹" << endl;
 	}
 private:
 	string m_sflavour;

@@ -9,15 +9,15 @@ public:
 	CareTaker() {}
 	~CareTaker() 
 	{
-		;
 		for (auto oIterator = m_oMementos.begin(); oIterator != m_oMementos.end(); ++oIterator)
 		{
-			delete oIterator._Ptr;
+			delete *oIterator;
 		}
+		m_oMementos.clear();
 	}
 
 	void add(Memento* memento) { this->m_oMementos.push_back(memento); }
-	Memento* get(int index) { this->m_oMementos[i]; }
+	Memento* get(int index) { return this->m_oMementos[index]; }
 
 private:
 	vector<Memento*> m_oMementos;
