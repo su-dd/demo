@@ -17,21 +17,21 @@
 class Invoker
 {
 public:
-	Invoker() : pCommand(nullptr) {}
-	~Invoker() { delete pCommand; }
+	Invoker() {}
+	~Invoker() {}
 
-	void setCommand(Command* command)
+	void setCommand(Command command)
 	{
-
+		m_oCommand = command;
 	}
 
 	void executeCommand()
 	{
-
+		m_oCommand.execute();
 	}
 
 private:
-	Command* pCommand;
+	Command m_oCommand;
 };
 
 #endif // !Invoker_H

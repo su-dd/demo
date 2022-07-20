@@ -52,6 +52,4 @@ add_subdirectory("Iterator")
 add_subdirectory(Memento)
 
 # 命令模式
-
-# test
-add_subdirectory(Testing)
+add_subdirectory(Command)
