@@ -4,7 +4,12 @@
 class Leaf : public Component
 {
 public:
+	explicit Leaf(string key) : Component(key) {}
+public:
+	void buy()
+	{
 
+	}
 };
 
 

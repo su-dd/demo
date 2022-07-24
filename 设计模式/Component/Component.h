@@ -1,7 +1,7 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 #include <iostream>
-#include <list>
+#include <map>
 #include <string>
 
 using namespace std;
@@ -12,11 +12,11 @@ public:
 	explicit Component(string key) : m_sKey(key) {}
 	virtual ~Component() {}
 public:
-	void add(Component* component) {}
-	void remove(Component* component) {}
+	void add(string key, Component* component) {}
+	void remove(string key) {}
 	Component* getParent() { return nullptr; }
-	Component* getChild(int) { return nullptr; }
-	list<Component*>* getChildren() { return nullptr; }
+	Component* getChild(string key) { return nullptr; }
+	map<string, Component*>* getChildren() { return nullptr; }
 public:
 	void sell() {}
 	void buy() {}

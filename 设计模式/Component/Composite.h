@@ -1,7 +1,7 @@
 #ifndef Composite_H
 #define Composite_H
 #include <iostream>
-#include <list>
+#include <map>
 #include <string>
 #include "Component.h"
 
@@ -10,24 +10,60 @@ using namespace std;
 class Composite : public Component
 {
 public:
-	Composite() {}
-	virtual ~Composite() {}
-public:
-	void add(Component* component) 
+	Composite(string key, int MaxNum) 
+		: Component(key)
+		, m_nMaxNum(MaxNum)
+		, m_nCurNum(0)
+		, m_pChildren(new map<string, Component*>())
 	{
+
 	}
-	void remove(Component* component) {}
-	Component* getChild(int) { return nullptr; }
-	list<Component*>* getChildren() { return m_pChildren; }
+
+	virtual ~Composite()
+	{
+		for each (auto var in *m_pChildren)
+		{
+			delete var.second;
+		}
+		m_pChildren->clear();
+		delete m_pChildren;
+	}
+
 public:
-	void sell() = 0;
-	void buy() = 0;
+	void add(string key, Component* component) 
+	{
+		m_pChildren->insert(pair<string, Component*>(key, component));
+	}
+
+	void remove(string key)
+	{
+		delete (*m_pChildren)[key];
+		m_pChildren->erase(key);
+	}
+
+	Component* getChild(string key) 
+	{ 
+		return m_pChildren->find(key)->second;
+	}
+
+	map<string, Component*>* getChildren()
+	{
+		return m_pChildren; 
+	}
+public:
+	void sell()
+	{
+
+	}
+
+	void buy()
+	{
+
+	}
 
 private:
-	String m_sKey;
 	int m_nMaxNum;
 	int m_nCurNum;
-	Component* m_pParent;
-	list<Component*>* m_pChildren;
+	map<string, Component*>* m_pChildren;
 };
 #endif // Composite_H
