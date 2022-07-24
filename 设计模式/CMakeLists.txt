@@ -53,3 +53,6 @@ add_subdirectory(Memento)
 
 # 命令模式
 add_subdirectory(Command)
+
+# 组合模式
+add_subdirectory(Component)
