@@ -1,69 +1,1 @@
-﻿#ifndef Composite_H
-#define Composite_H
-#include <iostream>
-#include <vector>
-#include <string>
-#include "Component.h"
-
-using namespace std;
-
-class Composite : public Component
-{
-public:
-	Composite() 
-		: Component(key)
-		, m_nNeedNum(0)
-		, m_nCurNum(0)
-		, m_pChildren(new map<string, Component*>())
-	{
-
-	}
-
-	virtual ~Composite()
-	{
-		for each (auto var in *m_pChildren)
-		{
-			delete var.second;
-		}
-		m_pChildren->clear();
-		delete m_pChildren;
-	}
-
-public:
-	void add(Component* component)
-	{
-		m_pChildren->push_back(component);
-		m_nNeedNum = m_pChildren->size();
-	}
-
-	void remove(int index)
-	{
-		m_pChildren->erase(m_pChildren->begin + index);
-		m_nNeedNum = m_pChildren->size();
-	}
-
-	Component* getChild(int index)
-	{ 
-		m_pChildren[index];
-	}
-public:
-	int buy(int num)
-	{
-		cout << m_sKey << "进货" << num << "根雪糕！" << endl;
-		for each (auto var in *m_pChildren)
-		{
-			var->buy(var->needNum()) ;
-		}
-	}
-
-	int needNum()
-	{
-		return m_nNeedNum - m_nCurNum;
-	}
-
-private:
-	int m_nNeedNum;
-	int m_nCurNum;
-	vector<Component*>* m_pChildren;
-};
-#endif // Composite_H
+﻿#ifndef Composite_H #define Composite_H  #include <iostream> #include <vector> #include <string> #include "Component.h"  using namespace std;  class Composite : public Component { public: 	Composite(string key)  		: Component(key) 		, m_nNeedNum(0) 	{ 	}  	virtual ~Composite() 	{ 		m_oChildren.clear(); 	}  public: 	void add(Component* component) 	{ 		m_oChildren.push_back(component); 		component->setParent(this); 		refresh(); 	}  	void remove(int index) 	{ 		m_oChildren.erase(m_oChildren.begin() + index); 		refresh(); 	}  	Component* getChild(int index) 	{  		m_oChildren[index]; 	}  	void refresh()  	{ 		m_nNeedNum = 0; 		for each (auto var in m_oChildren) 		{ 			m_nNeedNum += var->needNum(); 		} 		getParent()->refresh(); 	} public: 	int buy(int num) 	{ 		cout << m_sKey << "进货" << num << "根雪糕！" << endl; 		for each (auto var in m_oChildren) 		{ 			var->buy(var->needNum()) ; 		} 	}  	int needNum() 	{ 		return m_nNeedNum; 	}  private: 	int m_nNeedNum; 	vector<Component*> m_oChildren; }; #endif // Composite_H

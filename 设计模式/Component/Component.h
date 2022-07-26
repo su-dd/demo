@@ -9,22 +9,22 @@ using namespace std;
 class Component
 {
 public:
-	explicit Component(string key) 
-		: m_sKey(key)
-	{
-	}
+	explicit Component(string key) : m_sKey(key) , m_pParent(nullptr) {}
 	virtual ~Component() {}
 public:
-	void add(string key, Component* component) {}
-	void remove(string key) {}
-	Component* getParent() { return nullptr; }
-	Component* getChild(string key) { return nullptr; }
+	virtual void add(string key, Component* component) {}
+	virtual void remove(string key) {}
+	virtual Component* getParent(){ return m_pParent; }
+	virtual void setParent(Component* component) { m_pParent = component; }
+	virtual Component* getChild() { return nullptr; }
+	virtual void refresh() {}
 public:
-	int buy(int num) {}
-	int needNum() { return 0;  }
+	virtual int buy(int num) {}
+	virtual int needNum() { return 0;  }
 
-private:
+protected:
 	string m_sKey;
+	Component* m_pParent;
 };
 
 #endif // COMPONENT_H
