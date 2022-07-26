@@ -15,7 +15,8 @@ class IceFactoryReceiver
 public:
 	IceFactoryReceiver()
 		: m_sflavour("")
-		, m_sDryFruit("") {}
+		, m_sDryFruit("")
+	{}
 
 	void setFlavour(string flavour)
 	{

@@ -1,7 +1,7 @@
-#ifndef Composite_H
+﻿#ifndef Composite_H
 #define Composite_H
 #include <iostream>
-#include <map>
+#include <vector>
 #include <string>
 #include "Component.h"
 
@@ -10,9 +10,9 @@ using namespace std;
 class Composite : public Component
 {
 public:
-	Composite(string key, int MaxNum) 
+	Composite() 
 		: Component(key)
-		, m_nMaxNum(MaxNum)
+		, m_nNeedNum(0)
 		, m_nCurNum(0)
 		, m_pChildren(new map<string, Component*>())
 	{
@@ -30,40 +30,40 @@ public:
 	}
 
 public:
-	void add(string key, Component* component) 
+	void add(Component* component)
 	{
-		m_pChildren->insert(pair<string, Component*>(key, component));
+		m_pChildren->push_back(component);
+		m_nNeedNum = m_pChildren->size();
 	}
 
-	void remove(string key)
+	void remove(int index)
 	{
-		delete (*m_pChildren)[key];
-		m_pChildren->erase(key);
+		m_pChildren->erase(m_pChildren->begin + index);
+		m_nNeedNum = m_pChildren->size();
 	}
 
-	Component* getChild(string key) 
+	Component* getChild(int index)
 	{ 
-		return m_pChildren->find(key)->second;
-	}
-
-	map<string, Component*>* getChildren()
-	{
-		return m_pChildren; 
+		m_pChildren[index];
 	}
 public:
-	void sell()
+	int buy(int num)
 	{
-
+		cout << m_sKey << "进货" << num << "根雪糕！" << endl;
+		for each (auto var in *m_pChildren)
+		{
+			var->buy(var->needNum()) ;
+		}
 	}
 
-	void buy()
+	int needNum()
 	{
-
+		return m_nNeedNum - m_nCurNum;
 	}
 
 private:
-	int m_nMaxNum;
+	int m_nNeedNum;
 	int m_nCurNum;
-	map<string, Component*>* m_pChildren;
+	vector<Component*>* m_pChildren;
 };
 #endif // Composite_H
