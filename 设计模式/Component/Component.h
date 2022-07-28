@@ -19,7 +19,7 @@ public:
 	virtual Component* getChild() { return nullptr; }
 	virtual void refresh() {}
 public:
-	virtual int buy(int num) {}
+	virtual int buy(int num) { return 0; }
 	virtual int needNum() { return 0;  }
 
 protected:

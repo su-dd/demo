@@ -1,58 +1,58 @@
-# CMakeList.txt: ¶¥²ã CMake ÏîÄ¿ÎÄ¼ş£¬ÔÚ´Ë´¦Ö´ĞĞÈ«¾ÖÅäÖÃ
-# ²¢°üº¬×ÓÏîÄ¿¡£
+ï»¿# CMakeList.txt: é¡¶å±‚ CMake é¡¹ç›®æ–‡ä»¶ï¼Œåœ¨æ­¤å¤„æ‰§è¡Œå…¨å±€é…ç½®
+# å¹¶åŒ…å«å­é¡¹ç›®ã€‚
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("Éè¼ÆÄ£Ê½")
+project ("è®¾è®¡æ¨¡å¼")
 
 
-# ¼òµ¥¹¤³§
+# ç®€å•å·¥å‚
 add_subdirectory("SimpleFactory")
 
-# ¹¤³§
+# å·¥å‚
 add_subdirectory("FactoryMethod")
 
-# ³éÏó¹¤³§
+# æŠ½è±¡å·¥å‚
 add_subdirectory("AbstractFactory")
 
-# µ¥Àı
+# å•ä¾‹
 add_subdirectory("Singleton")
 
-# Ä£°å·½·¨
+# æ¨¡æ¿æ–¹æ³•
 add_subdirectory("Template")
 
-#ÏíÔªÄ£Ê½
+#äº«å…ƒæ¨¡å¼
 add_subdirectory("Flyweight")
 
-# Ô­ĞÍÄ£Ê½
+# åŸå‹æ¨¡å¼
 add_subdirectory("Prototype")
 
-# ²ßÂÔÄ£Ê½
+# ç­–ç•¥æ¨¡å¼
 add_subdirectory ("Strategy")
 
-# ×°ÊÎÆ÷Ä£Ê½
+# è£…é¥°å™¨æ¨¡å¼
 add_subdirectory ("Decorator")
 
-# ´úÀíÄ£Ê½
+# ä»£ç†æ¨¡å¼
 add_subdirectory ("Proxy")
 
-# ÇÅÄ£Ê½
+# æ¡¥æ¨¡å¼
 add_subdirectory ("Bridge")
 
-# Ãæ°åÄ£Ê½
+# é¢æ¿æ¨¡å¼
 add_subdirectory("Facade")
 
-# ÊÊÅäÆ÷
+# é€‚é…å™¨
 add_subdirectory("Adapter")
 
-# µü´úÆ÷
+# è¿­ä»£å™¨
 add_subdirectory("Iterator")
 
-# ±¸ÍüÂ¼
-add_subdirectory(Memento)
+# å¤‡å¿˜å½•
+add_subdirectory("Memento")
 
-# ÃüÁîÄ£Ê½
-add_subdirectory(Command)
+# å‘½ä»¤æ¨¡å¼
+add_subdirectory("Command")
 
-# ×éºÏÄ£Ê½
-add_subdirectory(Component)
+# ç»„åˆæ¨¡å¼
+add_subdirectory("Component")
