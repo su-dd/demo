@@ -56,3 +56,6 @@ add_subdirectory("Command")
 
 # 组合模式
 add_subdirectory("Component")
+
+# 职责链模式
+add_subdirectory("ChainOfResponsibility")
