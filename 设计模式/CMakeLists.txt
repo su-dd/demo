@@ -59,3 +59,6 @@ add_subdirectory("Component")
 
 # 职责链模式
 add_subdirectory("ChainOfResponsibility")
+
+# 访问者模式
+add_subdirectory("Visitor")
