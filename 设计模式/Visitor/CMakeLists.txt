@@ -15,6 +15,11 @@ include_directories(".")
 add_executable (
 	Visitor
 	"main.cpp"
+	"Visitor.h"
+	"ConcreteVisitor.h" 
+	"IceCreamPart.h" 
+	"ConcretaPart.h" 
+	"IceCream.h"
 )
 
 # TODO: 如有需要，请添加测试并安装目标。
