@@ -62,3 +62,6 @@ add_subdirectory("ChainOfResponsibility")
 
 # 访问者模式
 add_subdirectory("Visitor")
+
+# 解释器模式
+add_subdirectory(Interpreter)
