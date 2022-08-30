@@ -14,6 +14,14 @@ include_directories(".")
 add_executable (
 Interpreter
 "main.cpp"
- "Context.h" "AbstractExpression.h" "ValueExpression.h" "ImgExpression.h" "WeblinkExpression.h" "PhoneExpression.h")
+"Context.h" 
+"AbstractExpression.h"
+"ValueExpression.h" 
+"ImgExpression.h" 
+"WeblinkExpression.h" 
+"PhoneExpression.h"
+
+
+"PlusOperation.h")
 
 # TODO: 如有需要，请添加测试并安装目标。
