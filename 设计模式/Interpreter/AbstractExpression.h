@@ -11,12 +11,4 @@ public:
 	virtual ~AbstractExpression() {}
 	virtual string interprete(Context &ctx) = 0;
 };
-
-class NonTerminalExpression : public AbstractExpression
-{
-};
-
-class TerminalExpression : public AbstractExpression
-{
-};
 #endif // AbstractExpression_H

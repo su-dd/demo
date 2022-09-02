@@ -5,25 +5,19 @@
 #include "WeblinkExpression.h"
 #include "Context.h"
 #include <string>
+#include <iostream>
 using namespace std;
+
 
 int main(int argc, char *argv[])
 {
     Context oContext;
-    oContext.assign("Img1", "img王小二照片");
-    oContext.assign("Img2", "img蛋糕ing");
-    oContext.assign("p1", "13579");
-    oContext.assign("p2", "24681");
-    oContext.assign("web1", "www.好人.com");
-    oContext.assign("web2", "www.food.com");
+    oContext.assign("Img", "img王小二照片");
+    oContext.assign("p", "13579");
 
-    ValueExpression* value1 = new ValueExpression("Img1");
+    PlusOperation oPlus1(new ImgExpression(new ValueExpression("Img")), new PhoneExpression(new ValueExpression("p")));
 
-    new ImgExpression(new ValueExpression("Img1"));
-    new ValueExpression("p1");
-
-
-    PlusOperation oPlus1();
+    cout << oPlus1.interprete(oContext);
 
     return 0;
 }

@@ -2,17 +2,20 @@
 #define PhoneExpressiosn_H
 #include "AbstractExpression.h"
 
-class PhoneExpressiosn : public NonTerminalExpression
+class PhoneExpression : public AbstractExpression
 {
 public:
-	PhoneExpressiosn(AbstractExpression* expr)
-	: m_Expr(expr) {}
-	virtual ~PhoneExpressiosn()
+	PhoneExpression(AbstractExpression* expr)
+		: m_Expr(expr) 
+	{
+	}
+
+	virtual ~PhoneExpression()
 	{
 		delete m_Expr;
 	}
 
-	virtual string interpret(Context &ctx)
+	virtual string interprete(Context& ctx) override
 	{
 		return "联系方式：" + m_Expr->interprete(ctx);
 	}

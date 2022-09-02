@@ -65,3 +65,12 @@ add_subdirectory("Visitor")
 
 # 解释器模式
 add_subdirectory(Interpreter)
+
+# 中介者模式
+add_subdirectory(Mediator)
+
+# 观察者模式
+add_subdirectory(Observer)
+
+# 状态模式
+add_subdirectory(State)

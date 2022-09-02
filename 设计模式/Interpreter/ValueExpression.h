@@ -4,13 +4,15 @@
 #include "Context.h"
 using namespace std;
 
-class ValueExpression : public TerminalExpression
+class ValueExpression : public AbstractExpression
 {
 public:
-	ValueExpression(string key)
-		: m_key(key) {}
+	ValueExpression(string key) 
+		: m_key(key)
+	{
+	}
 
-	virtual string interprete(Context &ctx)
+	virtual string interprete(Context &ctx) override
 	{
 		return ctx.lookup(m_key);
 	}

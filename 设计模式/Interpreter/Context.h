@@ -9,7 +9,7 @@ class Context
 public:
 	void assign(string key, string value)
 	{
-		m_oContextMap.insert(key, value);
+		m_oContextMap.insert({ key, value });           
 	}
 
 	string lookup(string key)
