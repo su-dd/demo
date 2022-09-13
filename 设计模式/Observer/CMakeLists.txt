@@ -15,6 +15,10 @@ include_directories(".")
 add_executable (
 	Observer
 	"main.cpp"	
+	"Subject.h" 
+	"AddObServer.h" 
+	"ProductDepartment.h" 
+	"MarketingDepartment.h"
 )
 
 # TODO: 如有需要，请添加测试并安装目标。

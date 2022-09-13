@@ -1,8 +1,15 @@
 ﻿#include <iostream>
+#include "MarketingDepartment.h"
+#include "ProductDepartment.h"
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	cout << "观察者模式" << endl;
+	MarketingDepartment oMarketingDepartment;
+	ProductDepartment oProductDepartment;
+
+	oMarketingDepartment.addObServer(&oProductDepartment);
+
+	oMarketingDepartment.sell(2);
 	return 0;
 }
