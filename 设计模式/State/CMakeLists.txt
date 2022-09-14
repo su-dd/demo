@@ -15,6 +15,6 @@ include_directories(".")
 add_executable (
 	State
 	"main.cpp"	
-)
+ "ProductContext.h" "State.h" "IceCreamState.h" "BoxIceCreamState.h")
 
 # TODO: 如有需要，请添加测试并安装目标。
