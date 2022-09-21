@@ -74,3 +74,6 @@ add_subdirectory(Observer)
 
 # 状态模式
 add_subdirectory(State)
+
+# 建造者
+add_subdirectory(Builder)
