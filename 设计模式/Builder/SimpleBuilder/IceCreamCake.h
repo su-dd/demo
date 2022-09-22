@@ -12,7 +12,8 @@ public:
 	{
 	public:
 		Builder(string cakeBillet, string IceCream)
-			: m_cakeBillet(cakeBillet), m_IceCream(IceCream) , m_fruit(""), m_chocolate(""), m_decoration("")
+			: m_cakeBillet(cakeBillet), m_IceCream(IceCream)
+			, m_fruit(""), m_chocolate(""), m_decoration("")
 		{}
 		~Builder() {}
 

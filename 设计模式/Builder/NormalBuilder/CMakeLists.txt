@@ -16,6 +16,7 @@ add_executable (
 	NormalBuilder
 	"main.cpp"
 	"IceCreamCake.h"
-)
+	"Builder.h"
+ "Director.h" "ChocolateCakeBuilder.h")
 
 # TODO: 如有需要，请添加测试并安装目标。

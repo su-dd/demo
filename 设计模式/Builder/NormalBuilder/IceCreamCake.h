@@ -8,8 +8,11 @@ using namespace std;
 class IceCreamCake
 {
 public:
-
-public:
+	IceCreamCake(string cakeBillet, string IceCream)
+		: m_cakeBillet(cakeBillet), m_IceCream(IceCream)
+		, m_fruit(""), m_chocolate(""), m_decoration("")
+	{
+	}
 	~IceCreamCake() {}
 
 	void taste()
@@ -22,15 +25,20 @@ public:
 			cout << m_decoration << "的 ";
 		cout << m_cakeBillet << "的 " << m_IceCream << "的 " << "蛋糕";
 	}
-private:
-	IceCreamCake(Builder* builder)
-		: m_cakeBillet(""), m_IceCream(""), m_fruit(""), m_chocolate(""), m_decoration("")
+
+	void setFruit(string fruit)
 	{
-		this->m_cakeBillet = builder->m_cakeBillet;
-		this->m_IceCream = builder->m_IceCream;
-		this->m_fruit = builder->m_fruit;
-		this->m_chocolate = builder->m_chocolate;
-		this->m_decoration = builder->m_decoration;
+		m_fruit = fruit;
+	}
+
+	void setChocolate(string chocolate)
+	{
+		m_chocolate = chocolate;
+	}
+
+	void setDecoration(string decoration)
+	{
+		m_decoration = decoration;
 	}
 
 private:
