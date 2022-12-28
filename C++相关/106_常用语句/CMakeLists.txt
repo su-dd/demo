@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project(Demo LANGUAGES CXX)
+project(106_常用语句 LANGUAGES CXX)
 
 add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
 add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
@@ -13,7 +13,7 @@ include_directories(".")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (
-	Demo
+	demo_106
 	"main.cpp"
 )
 
