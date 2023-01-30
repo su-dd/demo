@@ -4,5 +4,3 @@ int main()
 	int b = 1;
 	int c = a + b;
 }
-
-
