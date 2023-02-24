@@ -1,3 +1,0 @@
-C:\environment\cmake-3.25.2-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\demo_110.dir/objects.a
-C:\environment\mingw64\bin\ar.exe qc CMakeFiles\demo_110.dir/objects.a @CMakeFiles\demo_110.dir\objects1
-C:\environment\mingw64\bin\g++.exe  -Wall -fexec-charset=GBK -g -Wl,--whole-archive CMakeFiles\demo_110.dir/objects.a -Wl,--no-whole-archive -o demo_110.exe -Wl,--out-implib,libdemo_110.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\demo_110.dir\linkLibs.rsp
