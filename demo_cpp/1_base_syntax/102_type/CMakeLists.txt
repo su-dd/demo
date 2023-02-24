@@ -1,0 +1,23 @@
+﻿# CMakeList.txt: test 的 CMake 项目，在此处包括源代码并定义
+# 项目特定的逻辑。
+#
+cmake_minimum_required (VERSION 3.8)
+# 中文乱码
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fexec-charset=GBK")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexec-charset=GBK")
+
+project(102_基础类型 LANGUAGES CXX)
+
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+
+# 指定头文件的搜索路径
+include_directories(".")
+
+# 将源代码添加到此项目的可执行文件。
+add_executable (
+	demo_102
+	"main.cpp"
+)
+
+# TODO: 如有需要，请添加测试并安装目标。
