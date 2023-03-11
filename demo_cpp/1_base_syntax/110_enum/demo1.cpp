@@ -4,12 +4,12 @@ using namespace std;
 
 enum Weekday
 {
-	Mon,
-	Tues,
-	Wed,
-	Thur,
-	Fri,
-	Sat,
+	Mon = 1,
+	Tues = 2,
+	Wed = 1 + Tues,
+	Thur = 2 + 2,
+	Fri = 5,
+	Sat = 6,
 	Sun
 };
 
@@ -23,7 +23,7 @@ public:
 		case Mon:
 			cout << "This is Mon， I want fish;" << endl;
 			break;
-		case 1:
+		case Tues:
 			cout << "This is Tues， I want fish;" << endl;
 			break;
 		case Wed:
@@ -42,7 +42,7 @@ public:
 	}
 };
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	Cat oCat;
 	oCat.eat(Mon);
@@ -52,10 +52,9 @@ int main(int argc, char* argv[])
 	Weekday oDay1 = Wed;
 	oCat.eat(oDay1);
 
-	Weekday& oDay2 = oDay1;
+	Weekday &oDay2 = oDay1;
 	oDay2 = Thur;
 	oCat.eat(oDay2);
 
 	return 0;
 }
-
