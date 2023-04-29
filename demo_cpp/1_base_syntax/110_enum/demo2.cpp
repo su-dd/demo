@@ -14,7 +14,7 @@ enum class Weekday1 : int
 
 int main(int argc, char const *argv[])
 {
-    int a;
+    int a = 0;
     int b = 1;
     cout << a << endl;
     cout << b << endl;
