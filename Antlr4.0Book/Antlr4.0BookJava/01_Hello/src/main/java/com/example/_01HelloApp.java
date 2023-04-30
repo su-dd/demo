@@ -6,7 +6,7 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CodePointCharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 
-public class HelloApp {
+public class _01HelloApp {
     public static void main(String[] args) {
         String test = "hello world";
         CodePointCharStream input = CharStreams.fromString(test);

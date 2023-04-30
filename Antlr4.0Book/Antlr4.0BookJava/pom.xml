@@ -10,6 +10,13 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>01_Hello</module>
+        <module>03_Array</module>
+        <module>04_1_Expr</module>
+        <module>04_2LibExpr</module>
+        <module>04_3Calc</module>
+        <module>04_4ExtractInterface</module>
+        <module>04_5Rows</module>
+        <module>Base_Common</module>
     </modules>
     <properties>
         <java.version>11</java.version>
