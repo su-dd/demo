@@ -17,6 +17,9 @@
         <module>04_4ExtractInterface</module>
         <module>04_5Rows</module>
         <module>Base_Common</module>
+        <module>04_6Sequence</module>
+        <module>04_7XMLLexer</module>
+        <module>04_8InsertSerialID</module>
     </modules>
     <properties>
         <java.version>11</java.version>

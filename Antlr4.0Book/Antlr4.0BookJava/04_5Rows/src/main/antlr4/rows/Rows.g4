@@ -15,9 +15,7 @@ locals [int i = 0]
     :   (   STUFF
             {
             $i++;
-            if ($i == col) {
-                System.out.println($STUFF.text);
-            }
+            if ( $i == col ) System.out.println($STUFF.text);
             }
         )+
     ;

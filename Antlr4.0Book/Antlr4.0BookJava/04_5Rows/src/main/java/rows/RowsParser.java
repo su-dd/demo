@@ -207,9 +207,7 @@ public class RowsParser extends Parser {
 				((RowContext)_localctx).STUFF = match(STUFF);
 
 				            _localctx.i++;
-				            if (_localctx.i == col) {
-				                System.out.println((((RowContext)_localctx).STUFF!=null?((RowContext)_localctx).STUFF.getText():null));
-				            }
+				            if ( _localctx.i == col ) System.out.println((((RowContext)_localctx).STUFF!=null?((RowContext)_localctx).STUFF.getText():null));
 				            
 				}
 				}

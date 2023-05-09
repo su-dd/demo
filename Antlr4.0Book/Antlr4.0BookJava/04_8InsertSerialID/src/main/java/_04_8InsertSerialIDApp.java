@@ -1,14 +1,14 @@
 import File.FileLoad;
+
+import javaLanguage.JavaLexer;
+import javaLanguage.JavaParser;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CodePointCharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import javaLanguage.JavaLexer;
-import javaLanguage.JavaParser;
-
-public class _04_4ExtractInterfaceApp {
+public class _04_8InsertSerialIDApp {
     public static void main(String[] args) {
         FileLoad fileLoad = new FileLoad();
         String inputText = fileLoad.getResourcesFileContent ("demo/Demo.java");
@@ -19,7 +19,9 @@ public class _04_4ExtractInterfaceApp {
         ParseTree tree = parser.compilationUnit(); // 开始语法分析过程
 
         ParseTreeWalker walker = new ParseTreeWalker(); // 新建一个标准的遍历器
-        ExtractInterfaceListener listener = new ExtractInterfaceListener(parser);
-        walker.walk(listener, tree);
+        InsertSerialIDListener listener = new InsertSerialIDListener(tokens);
+        walker.walk(listener, tree); // 使用监听器初始化对语法分析树的遍历
+
+        System.out.println(listener.rewriter.getText());
     }
 }
